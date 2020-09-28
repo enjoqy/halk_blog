@@ -11,7 +11,7 @@
     </el-row>
 
     <!--轮播-->
-    <el-row >
+    <el-row>
       <el-col :span='15' :offset='1'>
         <div class="grid-content bg-purple">
           <Carousel></Carousel>
@@ -43,14 +43,16 @@
 
     </el-row>
 
+
   </div>
 </template>
 
 <script>
-import Carousel from "../components/carousel/Carousel";
+import Carousel from "@/components/carousel/Carousel";
 import SecondDiagram from "../components/secondDiagram/SecondDiagram";
 import ContentCard from "../components/content/ContentCard";
 import HomeTag from "../components/homeTag/HomeTag";
+
 
 export default {
   name: "home",
@@ -58,7 +60,7 @@ export default {
     Carousel,
     SecondDiagram,
     ContentCard,
-    HomeTag
+    HomeTag,
   }
 }
 </script>

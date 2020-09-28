@@ -5,10 +5,8 @@
         <el-card>
           <div class="content-card">
             <el-row>
-              <h3 class="blog-title">
-                <router-link to="/contentDetail">
+              <h3 class="blog-title" @click="toContentDetail(article)">
                   <a href="javascript:void(0);">{{ article.title }}</a>
-                </router-link>
               </h3>
             </el-row>
 
@@ -81,7 +79,14 @@ export default {
     }
   },
   methods: {
-    dateFormat
+    dateFormat,
+    toContentDetail(val){
+      this.$router.push({
+        path: '/contentDetail',
+        query: {article: JSON.stringify(val)}
+
+      })
+    }
   },
   created() {
     request({
@@ -89,7 +94,6 @@ export default {
       method: 'get'
     }).then(data => {
       this.articles = data.data
-      console.log(this.articles);
     }).catch(err => {
       console.log(err);
     });

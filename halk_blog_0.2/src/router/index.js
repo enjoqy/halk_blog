@@ -11,6 +11,8 @@ export const constantRouterMap = [
     {path: '/classify', component: () => import('@/views/classify')},
     {path: '/tag', component: () => import('@/views/tag')},
     {path: '/messageBoard', component: () => import('@/views/messageBoard')},
+    {path: '/messageBoard', component: () => import('@/views/messageBoard')},
+    {path: '/contentDetail', component: () => import('@/components/contentDetail/ContentDetail')}
 ]
 
 const router = new VueRouter({
